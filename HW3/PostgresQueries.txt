@@ -1,0 +1,72 @@
+// Using Postgres Version: 12.1
+// Table Creation
+
+CREATE TABLE coordinates(
+name VARCHAR(15),
+location GEOMETRY);
+
+INSERT INTO coordinates
+values('USC Viterbi',ST_MakePoint(-118.289622,34.019540));
+
+INSERT INTO coordinates
+values('USC Gould',ST_MakePoint(-118.284238,34.018673));
+
+INSERT INTO coordinates
+values('USC Rossier',ST_MakePoint(-118.283884,34.021943));
+
+INSERT INTO coordinates
+values('USC Dornsife',ST_MakePoint(-118.284783,34.021950));
+
+INSERT INTO coordinates
+values('USC Annenberg',ST_MakePoint(-118.286195,34.022151));
+
+INSERT INTO coordinates
+values('Cammereli Cafe',ST_MakePoint(-118.283845,34.019108));
+
+INSERT INTO coordinates
+values('Panda express',ST_MakePoint(-118.2864019,34.0202094));
+
+INSERT INTO coordinates
+values('Traditions',ST_MakePoint(-118.2862471,34.0201508));
+
+INSERT INTO coordinates
+values('Lemonade USC',ST_MakePoint(-118.2861721,34.0201033));
+
+INSERT INTO coordinates
+values('Starbucks',ST_MakePoint(-118.2847502,34.020801));
+
+INSERT INTO coordinates
+values('Bovard Audi',ST_MakePoint(-118.285563,34.020805));
+
+INSERT INTO coordinates
+values('RTH',ST_MakePoint(-118.289871,34.020029));
+
+INSERT INTO coordinates
+values('OHE',ST_MakePoint(-118.289766,34.020600));
+
+INSERT INTO coordinates
+values('Taper Hall',ST_MakePoint(-118.284591,34.022229));
+
+INSERT INTO coordinates
+values('SGM',ST_MakePoint(-118.289149,34.021207));
+
+// Convex Hull
+
+SELECT ST_AsText(ST_ConvexHull(
+	ST_Collect(
+			ST_GeomFromText('MULTIPOINT(-118.289622 34.019540, -118.284238 34.018673, 
+			-118.283884 34.021943, -118.284783 34.021950, -118.286195 34.022151, 
+			-118.283845 34.019108, -118.2864019 34.0202094, -118.2862471 34.0201508, -118.2861721 34.0201033, 
+			-118.2847502 34.020801, -118.285563 34.020805, -118.289871 34.020029, -118.289766 34.020600, 
+			-118.284591 34.022229, -118.289149 34.021207 )')
+			)) );
+
+POLYGON((-118.284238 34.018673,-118.289622 34.01954,-118.289871 34.020029,-118.289766 34.0206,-118.289149 34.021207,-118.286195 34.022151,-118.284591 34.022229,-118.283884 34.021943,-118.283845 34.019108,-118.284238 34.018673))
+
+// Nearest Neighbor
+
+SELECT c1.name, c2.name FROM coordinates as c1, coordinates as c2
+WHERE c1.name <> c2.name
+and c1.name='SGM'
+ORDER BY ST_Distance(c1.location,c2.location)
+LIMIT 4;

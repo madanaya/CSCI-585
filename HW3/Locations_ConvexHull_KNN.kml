@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+<Document>
+<Style id="z1">
+    <IconStyle>
+    <Icon>
+        <href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+    </Icon>
+    </IconStyle>
+    <LineStyle>
+        <color>7F00FFFF</color>
+        <width>5</width>
+    </LineStyle>
+</Style>
+    <Folder>
+        <name>Schools</name>
+        <open>1</open>
+        <visibility>0</visibility>
+        <Placemark>
+            <name>USC Viterbi</name>
+            <styleUrl>#z1</styleUrl>
+            <Point><coordinates>-118.289622,34.019540</coordinates></Point>
+        </Placemark>
+        <Placemark>
+            <name>USC Gould</name>
+            <styleUrl>#z1</styleUrl>
+            <Point><coordinates>-118.284238,34.018673</coordinates></Point>
+        </Placemark>
+        <Placemark>
+            <name>USC Rossier</name>
+            <styleUrl>#z1</styleUrl>
+            <Point><coordinates>-118.283884,34.021943</coordinates></Point>
+        </Placemark>
+        <Placemark>
+            <name>USC Dornsife</name>
+            <styleUrl>#z1</styleUrl>
+            <Point><coordinates>-118.284783,34.021950</coordinates></Point>
+        </Placemark>
+        <Placemark>
+            <name>USC Annenberg</name>
+            <styleUrl>#z1</styleUrl>
+            <Point><coordinates>-118.286195,34.022151</coordinates></Point>
+        </Placemark>
+    </Folder>
+    <Folder>
+        <name>Cafetaria</name>
+        <open>0</open>
+        <visibility>0</visibility>
+        <Placemark>
+            <name>Cammereli Cafe</name>
+            <styleUrl>#z1</styleUrl>
+            <Point><coordinates>-118.283845,34.019108</coordinates></Point>
+        </Placemark>
+        <Placemark>
+            <name>Panda express</name>
+            <styleUrl>#z1</styleUrl>
+            <Point><coordinates>-118.2864019,34.0202094</coordinates></Point>
+        </Placemark>
+        <Placemark>
+            <name>Traditions</name>
+            <styleUrl>#z1</styleUrl>
+            <Point><coordinates>-118.2862471,34.0201508</coordinates></Point>
+        </Placemark>
+        <Placemark>
+            <name>Lemonade USC</name>
+            <styleUrl>#z1</styleUrl>
+            <Point><coordinates>-118.2861721,34.0201033</coordinates></Point>
+        </Placemark>
+        <Placemark>
+            <name>Starbucks</name>
+            <styleUrl>#z1</styleUrl>
+            <Point><coordinates>-118.2847502,34.020801</coordinates></Point>
+        </Placemark>
+    </Folder>
+    <Folder>
+        <name>Classrooms</name>
+        <open>1</open>
+        <visibility>0</visibility>
+        <Placemark><name>Bovard Audi</name>
+            <styleUrl>#z1</styleUrl>
+            <Point><coordinates>-118.285563,34.020805</coordinates></Point>
+        </Placemark>
+        <Placemark>
+            <name>RTH</name>
+            <styleUrl>#z1</styleUrl>
+            <Point><coordinates>-118.289871,34.020029</coordinates></Point>
+        </Placemark>
+        <Placemark>
+            <name>OHE</name>
+            <styleUrl>#z1</styleUrl>
+            <Point><coordinates>-118.289766,34.020600</coordinates></Point>
+        </Placemark>
+        <Placemark>
+            <name>Taper Hall</name>
+            <styleUrl>#z1</styleUrl>
+            <Point><coordinates>-118.284591,34.022229</coordinates></Point>
+        </Placemark>
+        <Placemark>
+            <name>SGM</name>
+            <styleUrl>#z1</styleUrl>
+            <Point><coordinates>-118.289149,34.021207</coordinates></Point>
+        </Placemark>
+    </Folder>
+    <Placemark>
+        <name>Convex Hull</name>
+        <Style>
+            <LineStyle>
+                <color>7FDC143C</color>
+                <width>5</width>
+            </LineStyle>
+            <PolyStyle>
+                <color>7F00FF00</color>
+                <colorMode>normal</colorMode>
+                <fill>1</fill>
+                <outline>1</outline>
+            </PolyStyle>
+        </Style>
+        <Polygon>
+                <extrude>1</extrude>
+                <outerBoundaryIs>
+                <LinearRing>
+                    <coordinates> 
+                        -118.284238,34.018673,
+                        -118.289622,34.01954,
+                        -118.289871,34.020029,
+                        -118.289766,34.0206, 
+                        -118.289149,34.021207, 
+                        -118.286195,34.022151,
+                        -118.284591,34.022229,
+                        -118.283884,34.021943,
+                        -118.283845,34.019108,
+                        -118.284238,34.018673,
+                    </coordinates>
+                </LinearRing>
+                </outerBoundaryIs>
+        </Polygon>
+    </Placemark>
+    <Placemark>
+        <LineString>
+            <styleUrl>#z1</styleUrl>
+            <name>Nearest Neighbour</name>
+                <extrude>1</extrude>
+                <tessellate>1</tessellate>
+                <coordinates>-118.289149,34.021207 -118.289766,34.020600</coordinates>
+        </LineString>
+        </Placemark>
+        <Placemark>
+        <LineString>
+        <styleUrl>#z1</styleUrl>
+            <name>Nearest Neighbour</name>
+                <extrude>1</extrude>
+                <tessellate>1</tessellate>
+                <coordinates>-118.289149,34.021207 -118.289871,34.020029</coordinates>
+        </LineString>
+        </Placemark>
+        <Placemark>
+        <LineString>
+        <styleUrl>#z1</styleUrl>
+            <name>Nearest Neighbour</name>
+                <extrude>1</extrude>
+                <tessellate>1</tessellate>
+                <coordinates>-118.289149,34.021207 -118.289622,34.019540</coordinates>
+        </LineString>
+        </Placemark>
+        <Placemark>
+        <LineString>
+        <styleUrl>#z1</styleUrl>
+            <name>Nearest Neighbour</name>
+                <extrude>1</extrude>
+                <tessellate>1</tessellate>
+                <coordinates>-118.289149,34.021207 -118.2864019,34.0202094</coordinates>
+        </LineString>
+    </Placemark>
+</Document>
+</kml>

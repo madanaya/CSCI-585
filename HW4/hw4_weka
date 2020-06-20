@@ -1,0 +1,22 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.MultilayerPerceptron -L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H a -G -R
+Relation:     housing
+Instances:    506
+Attributes:   14
+              CRIM
+              ZN
+              INDUS
+              CHAS
+              NOX
+              RM
+              AGE
+              DIS
+              RAD
+              TAX
+              PTRATIO
+              B
+              LSTAT
+              class
+Test mode:    evaluate on training data
+
